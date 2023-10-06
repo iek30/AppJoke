@@ -18,7 +18,7 @@ export class JokeListComponentComponent {
   }
 
   agregarNuevaBroma(joke: Joke){
-    this.jokes.unshift(joke);
+    this.jokes.push(joke);
   }
 
 }
