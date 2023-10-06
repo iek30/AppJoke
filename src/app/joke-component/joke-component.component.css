@@ -22,8 +22,9 @@ p{
 }
 
 .borrar{
-  background-color: red;
+  background-color: rgb(0, 0, 0, 0);
   border: 2px solid red;
+  color: red;
   border-radius: 50%;
   width: 50px;
 }
