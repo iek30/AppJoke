@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Joke } from '../joke';
 
 @Component({
@@ -7,6 +7,14 @@ import { Joke } from '../joke';
   styleUrls: ['./joke-component.component.css']
 })
 export class JokeComponentComponent {
-  @Input()
-  joke!: Joke;
+  @Input() joke!: Joke;
+  @Input() jokes!: Joke[];
+
+  eliminarUnaBroma(joke: Joke){
+    const index = this.jokes.indexOf(joke);
+
+    if (index !== -1) {
+      this.jokes.splice(index, 1);
+    }
+  }
 }

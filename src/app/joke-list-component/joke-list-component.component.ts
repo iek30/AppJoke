@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Joke } from '../joke';
 
 @Component({
@@ -7,6 +7,7 @@ import { Joke } from '../joke';
   styleUrls: ['./joke-list-component.component.css']
 })
 export class JokeListComponentComponent {
+
   jokes: Joke[];
 
   constructor(){
@@ -18,7 +19,8 @@ export class JokeListComponentComponent {
   }
 
   agregarNuevaBroma(joke: Joke){
-    this.jokes.push(joke);
+    this.jokes.unshift(joke);
   }
+
 
 }
