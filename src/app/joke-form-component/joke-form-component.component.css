@@ -1,0 +1,32 @@
+div{
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 5%;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+h4{
+    color: white;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+input{
+    border-radius: 10px;
+    width: 20rem;
+    padding: 2%;
+    margin-top: 10px;
+}
+
+button{
+    border: 3px solid black;
+    border-radius: 15px;
+    width: 22rem;
+    color: white;
+    background:rgb(118, 46, 8);
+    cursor: pointer;
+    margin-top: 10px;
+}

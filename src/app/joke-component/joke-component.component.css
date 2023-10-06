@@ -1,0 +1,33 @@
+div{
+    border: 3px solid black;
+    border-radius: 15px;
+    height: 120px;
+    overflow: auto;
+    padding: 5%;
+    background: rgb(33,110,28);
+    background: linear-gradient(90deg, rgba(33,110,28,1) 0%, rgba(17,159,28,1) 35%, rgba(170,237,172,1) 100%);
+    box-shadow: 5px 5px 5px blue;
+}
+
+h4{
+    color: rgb(2, 46, 2);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+p{
+    color: rgb(2, 46, 2);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}
+
+button{
+    border: 3px solid black;
+    border-radius: 15px;
+    width: 5rem;
+    color: white;
+    background:rgb(35, 63, 2);
+    cursor: pointer;
+}

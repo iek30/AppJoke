@@ -1,0 +1,8 @@
+<div>
+    <h4>Crea un chiste</h4>
+    <input type="text" placeholder="Introduce una frase..." #pregunta>
+    <br>
+    <input type="text" placeholder="Introduce una respuesta..." #respuesta>
+    <br>
+    <button (click)="crearBroma(pregunta.value, respuesta.value)">Crear Chiste</button>
+</div>
