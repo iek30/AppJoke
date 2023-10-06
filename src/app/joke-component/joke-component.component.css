@@ -3,6 +3,7 @@ div{
     overflow: auto;
     padding: 5%;
     background: rgb(0, 0, 0,50%);
+    box-shadow: 5px 5px 5px gray;
 }
 
 h4{
@@ -13,7 +14,8 @@ h4{
 }
 
 p{
-    color: gray;
+    color: white;
+    text-decoration: underline;
     font-style: italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;

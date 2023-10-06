@@ -2,6 +2,7 @@ div{
     text-align: center;
     padding: 5%;
     background: rgb(0, 0, 0,50%);
+    box-shadow: 5px 5px 5px gray;
 }
 
 h4{
