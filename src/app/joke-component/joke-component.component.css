@@ -21,6 +21,13 @@ p{
     font-size: 20px;
 }
 
+.borrar{
+  background-color: red;
+  border: 2px solid red;
+  border-radius: 50%;
+  width: 50px;
+}
+
 button {
     border-radius: 4px;
     background-color: #f4511e;
