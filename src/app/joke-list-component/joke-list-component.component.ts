@@ -10,7 +10,9 @@ export class JokeListComponentComponent {
 
   jokes: Joke[];
 
+
   constructor(){
+
     this.jokes = [
       new Joke('¿Cuál es la bebida alcohólica preferida de un programador?','El JLabel.'),
       new Joke('¿Sabes que existen 10 tipos de personas?','Los que saben binario y los que no.'),

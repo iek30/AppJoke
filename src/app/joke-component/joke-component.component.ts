@@ -12,9 +12,15 @@ export class JokeComponentComponent {
 
   eliminarUnaBroma(joke: Joke){
     const index = this.jokes.indexOf(joke);
-
     if (index !== -1) {
       this.jokes.splice(index, 1);
     }
+  }
+
+
+  modificarUnaBroma(joke: Joke, frase:string, respuesta:string){
+    const index = this.jokes.indexOf(joke);
+    this.jokes[index].punchline = respuesta;
+    this.jokes[index].setup = frase;
   }
 }

@@ -1,5 +1,5 @@
 <div class="contenedor">
-    <button class="borrar" (click)="eliminarUnaBroma(joke)">
+    <button class="op" (click)="eliminarUnaBroma(joke)">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash-x" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
           <path d="M4 7h16" />
@@ -8,6 +8,33 @@
           <path d="M10 12l4 4m0 -4l-4 4" />
         </svg>
     </button>
+    <a [href]="'#modal' + joke.punchline">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+        <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+        <path d="M16 5l3 3" />
+      </svg>
+    </a>
+
+    <div [id]="'modal' + joke.punchline" class="modalmask">
+      <div class="modalbox movedown">
+          <a href="#close" title="Close" class="close">X</a>
+          <h2>Actualiza el chiste:</h2>
+          <input type="text" placeholder="Nueva frase..." #pregunta>
+          <input type="text" placeholder="Nueva respuesta..." #frase>
+          <br><br>
+          <button class="op" (click)="modificarUnaBroma(joke,pregunta.value,frase.value)">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checkbox" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M9 11l3 3l8 -8" />
+              <path d="M20 12v6a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h9" />
+            </svg>
+          </button>
+      </div>
+    </div>
+
+
     <h4>{{joke.setup}}</h4>
     <p [hidden]="joke.hide">{{joke.punchline}}</p>
     <button (click)="joke.toggle()"><span>Ver</span></button>
