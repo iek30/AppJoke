@@ -24,5 +24,7 @@ export class JokeListComponentComponent {
     this.jokes.unshift(joke);
   }
 
+  
+
 
 }

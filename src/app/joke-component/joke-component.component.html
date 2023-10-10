@@ -8,7 +8,7 @@
           <path d="M10 12l4 4m0 -4l-4 4" />
         </svg>
     </button>
-    <a [href]="'#modal' + joke.punchline">
+    <a [href]="'#modal' + joke.id">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
@@ -17,14 +17,14 @@
       </svg>
     </a>
 
-    <div [id]="'modal' + joke.punchline" class="modalmask">
+    <div [id]="'modal' + joke.id" class="modalmask">
       <div class="modalbox movedown">
           <a href="#close" title="Close" class="close">X</a>
           <h2>Actualiza el chiste:</h2>
           <input type="text" placeholder="Nueva frase..." #pregunta>
           <input type="text" placeholder="Nueva respuesta..." #frase>
           <br><br>
-          <button class="op" (click)="modificarUnaBroma(joke,pregunta.value,frase.value)">
+          <button class="op" (click)="modificarUnaBroma(joke,pregunta.value,frase.value)"><a href="#close" title="Close" class="close"></a>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checkbox" width="44" height="44" viewBox="0 0 24 24" stroke-width="2.5" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M9 11l3 3l8 -8" />
