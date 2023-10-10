@@ -17,7 +17,6 @@ export class JokeComponentComponent {
     }
   }
 
-
   modificarUnaBroma(joke: Joke, frase:string, respuesta:string){
     const index = this.jokes.indexOf(joke);
     this.jokes[index].punchline = respuesta;
