@@ -1,5 +1,6 @@
 import { Component, Input, Output } from '@angular/core';
 import { Joke } from '../joke';
+import { Servicio } from '../servicio';
 
 @Component({
   selector: 'joke-list-component',
@@ -8,23 +9,11 @@ import { Joke } from '../joke';
 })
 export class JokeListComponentComponent {
 
-  jokes: Joke[];
-
+  servicio:Servicio;
 
   constructor(){
-
-    this.jokes = [
-      new Joke('¿Cuál es la bebida alcohólica preferida de un programador?','El JLabel.'),
-      new Joke('¿Sabes que existen 10 tipos de personas?','Los que saben binario y los que no.'),
-      new Joke('¿Por qué el software se parece a la iglesia?','Porque primero lo construimos y luego rezamos.')
-    ];
+    this.servicio = new Servicio();
   }
-
-  agregarNuevaBroma(joke: Joke){
-    this.jokes.unshift(joke);
-  }
-
-
 
 
 }

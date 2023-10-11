@@ -9,12 +9,10 @@ import { Joke } from '../joke';
 export class JokeComponentComponent {
   @Input() joke!: Joke;
   @Input() jokes!: Joke[];
+  @Output() bromaDelete = new EventEmitter<{jokeAEliminar:Joke}>();
 
-  eliminarUnaBroma(joke: Joke){
-    const index = this.jokes.indexOf(joke);
-    if (index !== -1) {
-      this.jokes.splice(index, 1);
-    }
+  borrarBroma(){
+    this.bromaDelete.emit({jokeAEliminar: this.joke});
   }
 
   modificarUnaBroma(joke: Joke, frase:string, respuesta:string){
