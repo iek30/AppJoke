@@ -1,4 +1,4 @@
 <joke-form-component (jokeCreated)="servicio.agregarNuevaBroma($event)"></joke-form-component>
 <div>
-    <joke *ngFor="let j of servicio.jokes" [joke]="j" [jokes]="servicio.jokes" (bromaDelete)="servicio.eliminarUnaBroma(j)"></joke>
+    <joke *ngFor="let j of servicio.obtenerBromas()" [joke]="j" [jokes]="servicio.obtenerBromas()" (bromaDelete)="servicio.eliminarUnaBroma(j.id)"></joke>
 </div>

@@ -2,7 +2,7 @@ import { Joke } from "./joke";
 
 export class Servicio {
 
-    jokes: Joke[];
+    private jokes: Joke[];
 
 
     constructor(){
@@ -13,15 +13,19 @@ export class Servicio {
         new Joke('¿Por qué el software se parece a la iglesia?','Porque primero lo construimos y luego rezamos.')
       ];
     }
+
+    obtenerBromas(){
+      return [... this.jokes];
+    }
   
-    agregarNuevaBroma(joke: Joke){
-      this.jokes.unshift(joke);
+    agregarNuevaBroma(joke: any){
+      this.jokes.unshift(new Joke(joke.setup, joke.punchline));
     }
 
-    eliminarUnaBroma(joke: Joke){
+    eliminarUnaBroma(id: number){
       
       for (let index = 0; index < this.jokes.length; index++) {
-        if (joke.id === this.jokes[index].id) {
+        if (id === this.jokes[index].id) {
           this.jokes.splice(index,1)
         }
       }
