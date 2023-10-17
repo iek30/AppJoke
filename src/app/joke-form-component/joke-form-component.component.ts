@@ -8,7 +8,7 @@ import { Joke } from '../joke';
 })
 export class JokeFormComponentComponent {
 
-  @Output() jokeCreated = new EventEmitter<Joke>();
+  @Output() jokeCreated = new EventEmitter<any>();
 
   crearBroma(pregunta:string, respuesta:string) {
     this.jokeCreated.emit(new Joke(pregunta, respuesta));
